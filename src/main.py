@@ -1,4 +1,9 @@
+import os
+import pathlib
+import shutil
+
 #import su respectiva funcion 
+from crearDir import crearDirectorio
 
 def printMenu():
     print("Menu de acciones:")
@@ -13,8 +18,9 @@ def main():
         #Recuerden borrar el continue cuando coloquen su funcion
         match accion:
             case 1:
-                continue
-                #Funcion
+                nombre = input("Ingrese el nombre del directorio:\n")
+                crearDirectorio(nombre)
+                
             case 2:
                 continue
                 #Funcion
