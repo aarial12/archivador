@@ -4,6 +4,7 @@ import shutil
 
 #import su respectiva funcion 
 from crearDir import crearDirectorio
+from crearArchivo import crearArchivoTXT
 
 def printMenu():
     print("Menu de acciones:")
@@ -20,8 +21,10 @@ def main():
             case 1:
                 nombre = input("Ingrese el nombre del directorio:\n")
                 crearDirectorio(nombre)
-                
+                continue 
             case 2:
+                nombre = input("Ingrese el nombre del directorio:\n")
+                crearArchivoTXT("../explorador/", nombre)
                 continue
                 #Funcion
             case 3:
@@ -51,6 +54,4 @@ def main():
             case _:
                 print("La entrada debe ser un numero del 1 al 0.")
     
-
-
 main()
